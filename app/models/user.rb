@@ -35,10 +35,6 @@ class User < ApplicationRecord
     event.user_id == id
   end
 
-  def woman?
-    gender == 'woman'
-  end
-
   def attend(event)
     event_attendances.find_or_create_by(event_id: event.id)
   end
